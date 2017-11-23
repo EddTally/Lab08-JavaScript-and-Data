@@ -14,9 +14,13 @@
   */
   
   // set theData here to an empty string
+  let theData = "";
   
   // create a loop around this line with "for ... in" (look it up)_
-  let theData = `${obj.lecturers[1].firstName} ${obj.lecturers[1].lastName}`;
+  for(key in obj.lecturers){
+  theData += `<ul>${obj.lecturers[key].firstName} ${obj.lecturers[key].lastName}'s
+  favourite number is ${obj.lecturers[key].favouriteNumber}</ul>`;
+  }
   // end the for loop here
   
   // populates the chosen element's content with the data:
